@@ -4,7 +4,7 @@ This document aims to provide the ground rules for JavaScript code, such that it
 
 To achieve this, we are using a couple of tools to help us maintain the code base.
 
-Before I get into the tools, remember to **respect and maintain the formatting of an existing document**, meaning that your code should fail the review process if it doesn't maintain consistency with the rest of the document.
+Remember to **respect and maintain the formatting of an existing document**, meaning that your code should fail the review process if it doesn't maintain consistency with the rest of the document.
 
 ## EditorConfig
 
@@ -32,13 +32,18 @@ trim_trailing_whitespace = false
 
 ## ESLint, stylelint & Prettier
 
-Next, we are using [ESLint](https://eslint.org) and [stylelint](https://stylelint.io) in combination with [Prettier](https://prettier.io). ESLint is a JavaScript and stylelint a CSS linting utility, Prettier an opinionated code formatter. Together they analyse the code to find problematic patterns or code that doesn’t adhere to our style guidelines.
+Utilities we are using:
+  - [ESLint](https://eslint.org), a JavaScript linting utility
+  - [stylelint](https://stylelint.io), CSS linting utility
+  - [Prettier](https://prettier.io), an opinionated code formatter
+  
+Together they analyse the code to find problematic patterns or code that doesn’t adhere to our style guidelines.
 
-If your editor supports it, most popular editors do, you get feedback while editing your code. Otherwise, your code gets analysed on commit. **If your code does not fit our guidelines, you cannot commit it!**
+If your editor supports it, you will get a feedback while editing your code. Otherwise, your code gets analysed on commit. **If your code does not fit our guidelines, you cannot commit it!**
 
-To achieve this functionality, we have to install some Node packages and set up a couple of configuration files.
+To achieve this functionality, several Node packages must be installed and configuration files added.
 
-The Node packages are:
+Node packages:
 
 + [babel-eslint](https://github.com/babel/babel-eslint)
 + [eslint](https://github.com/eslint/eslint)
@@ -145,7 +150,7 @@ For Prettier add this `.prettierrc` file to your root:
 
 ## package.json
 
-Finally, you have to update the `package.json` file with the following settings to add the supported browsers and activate the pre-commit linting:
+Update the `package.json` file with the following settings to add the supported browsers and activate the pre-commit linting:
 
 ```
 "browserslist": [
@@ -172,7 +177,7 @@ Finally, you have to update the `package.json` file with the following settings 
 }
 ```
 
-Speaking of the  `package.json` file here is one with the minimum required settings:
+Following is a `package.json` file with the minimum required settings:
 
 ```json
 {
@@ -244,7 +249,9 @@ Adjust the `package.json` file to your needs, but if you remove something make s
 
 ## Versioning
 
-As a versioning convention use [Semantic Versioning](https://semver.org). If you are new to SemVer, you can learn the basics [here](https://docs.npmjs.com/getting-started/semantic-versioning). Another helpful tool to understand SemVer much better is studying this [online tool](https://semver.npmjs.com) and see how it behaves.
+As a versioning convention use [Semantic Versioning](https://semver.org).
+New to semantic versioning? [Learn the basics](https://docs.npmjs.com/getting-started/semantic-versioning).
+For a great tool you can use to learn about how semver works with your favorite packages, see the [npm semver calculator](https://semver.npmjs.com).
 
 ### Increasing a Version
 
