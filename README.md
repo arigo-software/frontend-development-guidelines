@@ -134,7 +134,12 @@ For stylelint add this `.stylelintrc` file to your root:
       "custom-properties",
       "declarations"
     ],
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "selector-type-no-unknown": [ true, {
+      "ignoreTypes": [
+        "/^[a-zA-Z]([a-zA-Z0-9]*-[a-zA-Z0-9]+)+/"
+      ]
+    } ]
   }
 }
 ```
